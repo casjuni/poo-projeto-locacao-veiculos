@@ -2,7 +2,7 @@ package br.com.locadora.veiculos;
 
 import br.com.locadora.locacao.Locacao;
 
-public class Veiculo extends Locacao {
+public class Veiculo {
 
     public String getPlaca() {
         return placa;
