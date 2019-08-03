@@ -28,6 +28,14 @@ public class Veiculo {
         this.km = km;
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.modelo = marca;
+    }
+
     public String getModelo() {
         return modelo;
     }
@@ -52,20 +60,31 @@ public class Veiculo {
         this.tipo = tipo;
     }
 
+    public Opcionais[] getOpcionais() {
+        return opcionais;
+    }
+
+    public void setOpcionais(Opcionais[] opcionais) {
+        this.opcionais = opcionais;
+    }
+
     private String placa;
     private boolean disponivel;
     private int km;
-    public String marca;
+    private String marca;
     private String modelo;
     private TipoCombustivel combustivel;
     private TipoVeiculo tipo;
+    private Opcionais[] opcionais;
 
-    public Veiculo(String placa, boolean disponivel, int km, String modelo, TipoCombustivel combustivel) {
+    public Veiculo(String placa, int km, String marca, String modelo, TipoCombustivel combustivel, Opcionais[] opcionais) {
         setPlaca(placa);
-        setDisponivel(disponivel);
+        setDisponivel(true);
         setKm(km);
+        setMarca(marca);
         setModelo(modelo);
         setTipoCombustivel(combustivel);
+        setOpcionais(opcionais);
     }
 
 }

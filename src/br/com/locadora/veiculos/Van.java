@@ -2,8 +2,8 @@ package br.com.locadora.veiculos;
 
 public class Van extends Veiculo {
 
-    public Van(String placa, boolean disponivel, int km, String modelo, TipoCombustivel tipoCombustivel) {
-        super(placa, disponivel, km, modelo, tipoCombustivel);
+    public Van(String placa, int km, String marca, String modelo, TipoCombustivel tipoCombustivel, Opcionais[] opcionais) {
+        super(placa, km, marca, modelo, tipoCombustivel, opcionais);
         setTipo(TipoVeiculo.VAN);
     }
 
