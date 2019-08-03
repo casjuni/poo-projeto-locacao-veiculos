@@ -4,7 +4,7 @@ import br.com.locadora.veiculos.Veiculo;
 
 import java.util.Date;
 
-public class Locacao extends Veiculo{
+public class Locacao{
 
     private static int codigoLocacao = 0;
     private int kmInicial;
@@ -14,6 +14,7 @@ public class Locacao extends Veiculo{
     private float valorLocacao;
     private Situacao situacao;
     private Veiculo veiculo;
+    private String cliente;
 
     public Situacao getSituacao() {
         return situacao;
@@ -23,9 +24,17 @@ public class Locacao extends Veiculo{
         this.situacao = situacao;
     }
 
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
     public Locacao()
     {
-        super(null,0,null,null,null,null);
+
     }
 
     public int getCodigoLocacao() {
@@ -101,11 +110,11 @@ public class Locacao extends Veiculo{
         }
 
         if(getDataDevolucao() != null) {
-            if (getDataDevolucao().after(getDataDevolucao())) {
-                setValorLocacao(calculadora.CalcularValorLocacao(getVeiculo(), dataFinal, getDataDevolucao()));
-            } else if (dataDevolucao.before(getDataDevolucao())) {
-                this.valorLocacao += calculadora.CalcularValorLocacao(getVeiculo(), getDataDevolucao(), dataFinal);
-                this.valorLocacao += calculadora.CalcularValorMulta(getVeiculo(), getDataDevolucao(), dataFinal);
+            if (dataFinal.before(getDataDevolucao())) {
+                setValorLocacao(calculadora.CalcularValorLocacao(getVeiculo(), getDataRetirada(), dataFinal));
+            } else if (dataFinal.after(getDataDevolucao())) {
+                setValorLocacao(getValorLocacao() + calculadora.CalcularValorLocacao(getVeiculo(), getDataDevolucao(), dataFinal));
+                setValorLocacao(getValorLocacao() + calculadora.CalcularValorMulta(getVeiculo(), getDataDevolucao(), dataFinal));
             }
         }
 
@@ -123,13 +132,13 @@ public class Locacao extends Veiculo{
 
     public void realizarRetirada(Date dataRetirada, int kmInicial) {
         if(dataRetirada != null && kmInicial != 0) {
-            if(setDataRetirada(dataRetirada))
+            if(!setDataRetirada(dataRetirada))
                 return;
 
-            if(setKmInicial(kmInicial))
+            if(!setKmInicial(kmInicial))
                 return;
 
-            setDisponivel(false);
+            getVeiculo().setDisponivel(false);
             setSituacao(Situacao.ATIVO);
         }
         else
@@ -143,10 +152,10 @@ public class Locacao extends Veiculo{
         }
 
         if(dataDevolucao != null && kmFinal != 0) {
-            if(setDataDevolucao(dataDevolucao))
+            if(!setDataDevolucao(dataDevolucao))
                 return;
 
-            if(setKmFinal(kmFinal))
+            if(!setKmFinal(kmFinal))
                 return;
 
             setSituacao(Situacao.FINALIZADO);
@@ -159,6 +168,7 @@ public class Locacao extends Veiculo{
     {
         return "********** LOCAÇÃO **********" +
                 "\nCódigo: " + getCodigoLocacao() + " - Veículo: " + getVeiculo().getPlaca() +
+                "\n - Cliente: " + getCliente() +
                 "\n - Situação: " + getSituacao() +
                 "\n - Data retirada: " + (getDataRetirada() == null ? "Veículo não retirado" : getDataRetirada()) +
                 "\n - Data devolução: " + (getDataDevolucao() == null ? "Veículo não devolvido" : getDataDevolucao()) +
