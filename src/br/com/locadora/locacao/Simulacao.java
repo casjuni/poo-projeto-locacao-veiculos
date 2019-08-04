@@ -22,7 +22,7 @@ public class Simulacao extends Locacao {
     public Simulacao(Veiculo veiculo, String cpf, String dataLocacao, String dataDevolucao) {
 
         if(!veiculo.isDisponivel()) {
-            System.out.println("Veículo não está disponível para locação.");
+            System.out.println("Veiculo nao disponivel para locacao.");
             return;
         }
 
@@ -98,7 +98,7 @@ public class Simulacao extends Locacao {
             Date hoje = new Date();
             if(getDataInicial().before(hoje)) {
                 this.operacaoEfetivada = false;
-                System.out.println("Não foi possível efetivar a operação. A data de retirada " + getDataInicial() + " é anterior a data atual.");
+                System.out.println("Nao foi possivel efetivar a operacao. A data de retirada " + getDataInicial() + " e anterior a data atual.");
             }
             else
             {
@@ -126,11 +126,11 @@ public class Simulacao extends Locacao {
 
     public String exibirSimulacao()
     {
-        return "********** SIMULAÇÃO **********" +
-                "\nCódigo: " + getCodigoSimulacao() + " - Veículo: " + getVeiculo().getPlaca() +
+        return "********** SIMULACAO **********" +
+                "\nCodigo: " + getCodigoSimulacao() + " - Veiculo: " + getVeiculo().getPlaca() +
                 "\n - Cliente: " + getCpf() +
                 "\n - Data retirada: " + getDataInicial() +
-                "\n - Data devolução: " + getDataFinal() +
+                "\n - Data devolucao: " + getDataFinal() +
                 "\n - Valor total: " + getValorLocacao() + "\n";
     }
 }

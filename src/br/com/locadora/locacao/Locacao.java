@@ -4,7 +4,8 @@ import br.com.locadora.veiculos.Veiculo;
 
 import java.util.Date;
 
-public class Locacao{
+public class Locacao
+{
 
     private static int codigoLocacao = 0;
     private int kmInicial;
@@ -69,7 +70,7 @@ public class Locacao{
 
     public boolean setKmFinal(int kmFinal) {
         if(kmFinal <= getKmInicial()) {
-            System.out.println("Km final não pode ser menor ou igual o km inicial");
+            System.out.println("Km final nao pode ser menor ou igual o km inicial");
             return false;
         }
         else
@@ -105,7 +106,7 @@ public class Locacao{
         Calculadora calculadora = new Calculadora();
 
         if(dataFinal.before(getDataRetirada())) {
-            System.out.println("Data de retirada não pode ser menor que a data de devolução");
+            System.out.println("Data de retirada nao pode ser menor que a data de devolucao");
             return false;
         }
 
@@ -142,12 +143,12 @@ public class Locacao{
             setSituacao(Situacao.ATIVO);
         }
         else
-            System.out.println("Dados não podem ser nulos");
+            System.out.println("Dados nao podem ser nulos");
     }
 
     public void realizarDevolucao(Date dataDevolucao, int kmFinal) {
         if(!getSituacao().equals(Situacao.ATIVO)) {
-            System.out.println("O veículo ainda não foi retirado");
+            System.out.println("O veiculo ainda nao foi retirado");
             return;
         }
 
@@ -161,19 +162,19 @@ public class Locacao{
             setSituacao(Situacao.FINALIZADO);
         }
         else
-            System.out.println("Dados não podem ser nulos");
+            System.out.println("Dados nao podem ser nulos");
     }
 
     public String exibirLocacao()
     {
-        return "********** LOCAÇÃO **********" +
-                "\nCódigo: " + getCodigoLocacao() + " - Veículo: " + getVeiculo().getPlaca() +
+        return "********** LOCACAO **********" +
+                "\nCodigo: " + getCodigoLocacao() + " - Veiculo: " + getVeiculo().getPlaca() +
                 "\n - Cliente: " + getCliente() +
-                "\n - Situação: " + getSituacao() +
-                "\n - Data retirada: " + (getDataRetirada() == null ? "Veículo não retirado" : getDataRetirada()) +
-                "\n - Data devolução: " + (getDataDevolucao() == null ? "Veículo não devolvido" : getDataDevolucao()) +
-                "\n - Km inicial: " + (getKmInicial() == 0 ? "Veículo não retirado" : getKmInicial()) +
-                "\n - Km final: " + (getKmFinal() == 0 ? "Veículo não devolvido" : getKmFinal()) +
-                "\n - Valor total: " + (getValorLocacao() == 0 ? "Valor não calculado" : getValorLocacao()) + "\n";
+                "\n - Situacao: " + getSituacao() +
+                "\n - Data retirada: " + (getDataRetirada() == null ? "Veiculo nao retirado" : getDataRetirada()) +
+                "\n - Data devolucao: " + (getDataDevolucao() == null ? "Veiculo nao devolvido" : getDataDevolucao()) +
+                "\n - Km inicial: " + (getKmInicial() == 0 ? "Veiculo nao retirado" : getKmInicial()) +
+                "\n - Km final: " + (getKmFinal() == 0 ? "Veiculo nao devolvido" : getKmFinal()) +
+                "\n - Valor total: " + (getValorLocacao() == 0 ? "Valor nao calculado" : getValorLocacao()) + "\n";
     }
 }

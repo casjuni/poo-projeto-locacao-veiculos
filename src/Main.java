@@ -1,15 +1,17 @@
-/*
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-*/
-import br.com.locadora.locacao.*;
+import java.util.GregorianCalendar;
+
+import br.com.locadora.veiculos.*;
 import br.com.locadora.pessoa.*;
+import br.com.locadora.cadastro.CadastroVeiculos;
+import br.com.locadora.locacao.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -27,22 +29,27 @@ public class Main
 	
 	private static final int MAX_FUNCS = 10;
 	private static final int MAX_CLIENTES = 1000;
+	private static final int MAX_VEICULOS = 100;
+	
 	private static int ContagemFunc = -1;
 	private static int ContagemCliente = -1;
-	
+	private static int ContagemVeh = -1; 
+
 	private static Funcionario[] funcionarios = new Funcionario[MAX_FUNCS];
 	private static Cliente[] clientes = new Cliente[MAX_CLIENTES];
+	private static Veiculo[] frota = new Veiculo[MAX_VEICULOS];
 	
 	private static String arquivo_funcs = "funcionarios.txt";
 	private static String arquivo_clientes = "clientes.txt";
 	
 	private static ArquivoFunc FuncFile = new ArquivoFunc(arquivo_funcs);
 	private static ArquivoCliente ClienteFile = new ArquivoCliente(arquivo_clientes);
+	private static CadastroVeiculos VehFile = CadastroVeiculos.iniciaCadastroVeiculos();
 	
 	
     public static void main(String[] args) throws Exception  {
 
-       /* Veiculo veiculo = new Carro("ELO1025",
+    	Veiculo veiculo = new Carro("ELO1025",
                                     50000,
                                     "Honda",
                                     "Civic",
@@ -56,26 +63,23 @@ public class Main
                 TipoCombustivel.GASOLINA,
                 new Opcionais[] {Opcionais.AR_CONDICIONADO, Opcionais.DIRECAO_HIDRAULICA, Opcionais.BANCOS_COURO, Opcionais.VIDROS_ELETRICOS});
 
-       // System.out.println(veiculo.toString());
-        //System.out.println(veiculo2.toString());
+       System.out.println(veiculo.toString());
+       System.out.println(veiculo2.toString());
+       
+       Date hoje = new Date();
 
-        Date hoje = new Date();
+       Locacao locacao = new Simulacao(veiculo, "12345678900","04/08/2019", "10/08/2019");
+	   ((Simulacao)locacao).setOperacaoEfetivada(true);
+	   //System.out.println(((Simulacao) locacao).exibirSimulacao());
+	   //System.out.println(locacao.exibirLocacao());
+	   locacao.realizarRetirada(hoje, 51000);
+	   System.out.println(locacao.exibirLocacao());
+	   locacao.realizarDevolucao(StringToDate("09/08/2019"), 52000);
+	   System.out.println(locacao.exibirLocacao());
 
-
-
-        Locacao locacao = new Simulacao(veiculo, "12345678900","04/08/2019", "10/08/2019");
-        ((Simulacao) locacao).setOperacaoEfetivada(true);
-        //System.out.println(((Simulacao) locacao).exibirSimulacao());
-        //System.out.println(locacao.exibirLocacao());
-        locacao.realizarRetirada(hoje, 51000);
-        System.out.println(locacao.exibirLocacao());
-        locacao.realizarDevolucao(StringToDate("09/08/2019"), 52000);
-        System.out.println(locacao.exibirLocacao());
-
-    
-	*/
     	carregarFuncs();
     	carregarClientes();
+    	carregarVeiculos();
     	
 		int opcao;
 		
@@ -395,7 +399,7 @@ public class Main
 
     }
     
-    private static void logarFuncionario()
+    private static void logarFuncionario() throws Exception
     {
     	String email = JOptionPane.showInputDialog("Digite o e-mail: ");
     	String senha = JOptionPane.showInputDialog("Digite a senha: ");
@@ -438,7 +442,7 @@ public class Main
     	while(logou == false && tentativas > 0);
     }
     
-    private static void telaFuncionario()
+    private static void telaFuncionario() throws Exception
     {
     	int opcao;
     	do 
@@ -449,10 +453,10 @@ public class Main
 			switch (opcao) 
 			{
 				case 1:
-					// gerenciar veiculos
+					gerenciarVeiculos();
 					break;
 				case 2:
-					// ver historico de locacoes
+					JOptionPane.showMessageDialog(null, ArquivoHistorico.mostrarHistorico());
 					break;
 				case 3:
 					System.out.println("Voce decidiu sair!");
@@ -463,6 +467,33 @@ public class Main
 					break;
 			}
 		}	while (opcao != 3);
+    }
+    private static void gerenciarVeiculos()
+    {
+    	int opcao = 0;
+		do 
+		{
+			opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma opção:\n" + "1. Cadastrar Veículo\n"
+					+ "2. Imprimir dados\n" + "3. Remover Veículo\n4. Sair"));
+			switch (opcao) 
+			{
+				case 1:
+					cadastrarVeiculo();
+					break;
+				case 2:
+					imprimirVeiculos();
+					break;
+				case 3:
+					// remover veiculo;
+					break;
+				case 4:
+					System.out.println("Voce saiu!");
+					break;
+				default:
+					System.out.println("Opcao invalida!");
+					break;
+			}
+		} while (opcao != 4);
     }
     private static void cadastrarFuncionario() throws acessoNegadoException, IOException, limiteFuncException
     {
@@ -476,7 +507,7 @@ public class Main
     	String email = JOptionPane.showInputDialog("Digite o e-mail: ");
     	while(validarEmail(email) == false)
     	{
-    		email = JOptionPane.showInputDialog("E-mail inválido\nSeu e-mail deve conter . e @.\nDigite um e-mail: ");
+    		email = JOptionPane.showInputDialog("E-mail invalido\nSeu e-mail deve conter . e @.\nDigite um e-mail: ");
     	}
     	while(emailExistente(email) == true)
     	{
@@ -593,6 +624,79 @@ public class Main
 		}
 	}
     
+//______________________________ SISTEMA DE VEICULOS _____________________________ //
+    private static void carregarVeiculos() 
+    {
+		try 
+		{
+			frota = VehFile.lerVeh();
+		} catch (FileNotFoundException e) {
+			System.out.println("Erro: Arquivo não encontrado! " + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Erro durante a leitura do arquivo!" + e.getMessage());
+		}
+		for (int i = 0; i < MAX_VEICULOS && frota[i] != null; i++) {
+			ContagemVeh ++;
+		}
+	}
+    
+    private static void imprimirVeiculos() 
+    {
+		int i = 0;
+		System.out.println("------------------------");
+		while (i <= ContagemVeh && frota[i] != null) 
+		{
+			System.out.println(frota[i].toString());
+			System.out.println("------------------------");
+			i++;
+		}
+	}
+
+	private static void cadastrarVeiculo() 
+	{
+		if (ContagemVeh + 1 < MAX_VEICULOS) 
+		{
+			String placa = JOptionPane.showInputDialog("Digite a placa: ");
+			int km  = Integer.parseInt(JOptionPane.showInputDialog("Digite km: "));
+			String marca = JOptionPane.showInputDialog("Digite a marca: ");
+			String modelo = JOptionPane.showInputDialog("Digite o modelo: "); 
+			String c = JOptionPane.showInputDialog("Digite o tipo de combustivel: ");
+			TipoCombustivel combustivel = null;
+			Opcionais[] opcionais = {Opcionais.AR_CONDICIONADO, Opcionais.BANCOS_COURO};
+			
+			switch (c) 
+			{
+				case "ETANOL":
+					combustivel = TipoCombustivel.ETANOL;
+					break;
+				case "GASOLINA":
+					combustivel = TipoCombustivel.GASOLINA;
+					break;
+				case "DIESEL":
+					combustivel = TipoCombustivel.DIESEL;
+					break;
+				case "ELETRICO":
+					combustivel = TipoCombustivel.ELETRICO;
+					break;
+				case "FLEX":
+					combustivel = TipoCombustivel.FLEX;
+			}
+			Veiculo novo = new Veiculo(placa, km, marca, modelo, combustivel, opcionais);
+			try 
+			{
+				VehFile.salvarveh(novo);
+				frota[++ContagemVeh] = novo;
+		
+			} 
+			catch (IOException e) {
+				System.out.println("Erro no cadastro: " + e.getMessage());
+			}
+		} 
+		else System.out.println("Limite atingido!");
+	}
+
+//_________________________________ VALIDAÇÕES ___________________________________ //
+    
     public static boolean idadeValida(String dataNasc)
     {
     	String[] dados = new String[3];
@@ -678,7 +782,8 @@ public class Main
         return ((digit_1 == vetor_cpf[9]) && (digit_2 == vetor_cpf[10]));
     }
     
-    /*private static Date StringToDate(String date) {
+    private static Date StringToDate(String date) 
+    {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         try {
             return formatter.parse(date);
@@ -687,5 +792,5 @@ public class Main
             e.printStackTrace();
             return null;
         }
-    }*/ 
+    } 
 }
