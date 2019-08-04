@@ -1,5 +1,5 @@
 import br.com.locadora.locacao.Locacao;
-import br.com.locadora.locacao.Retirada;
+//import br.com.locadora.locacao.Retirada;
 import br.com.locadora.locacao.Simulacao;
 import br.com.locadora.pessoa.Cliente;
 import br.com.locadora.pessoa.Pessoa;
