@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40c4216f-8604-407e-b91a-cfeff8179438" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Situacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Situacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Funcionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Moto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Moto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Opcionais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Opcionais.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoCombustivel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoCombustivel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Van.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Van.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" afterDir="false" />
-    </list>
+    <list default="true" id="40c4216f-8604-407e-b91a-cfeff8179438" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +14,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="-1767">
+              <caret line="148" column="17" lean-forward="true" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,6 +43,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
               <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1805">
+              <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#776#777#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
+                <element signature="e#863#864#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#1090#1091#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1648#1649#0" expanded="true" />
+                <element signature="e#1683#1684#0" expanded="true" />
+                <element signature="e#2209#2210#0" expanded="true" />
+                <element signature="e#2245#2246#0" expanded="true" />
+                <element signature="e#3199#3200#0" expanded="true" />
+                <element signature="e#3234#3235#0" expanded="true" />
+                <element signature="e#3289#3290#0" expanded="true" />
+                <element signature="e#3337#3338#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -240,12 +265,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564845846797</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Inclusão de novos arquivos">
+      <created>1564951912409</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564951912409</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1691" height="929" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17311233" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -261,10 +292,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.35056746" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.35018963" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32996207" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32996207" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32996207" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32996207" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -279,7 +310,8 @@
     <MESSAGE value="Correção projeto" />
     <MESSAGE value="Inclusão de novos arquivos, métodos e tratamentos" />
     <MESSAGE value="Correção no recalculo do valor da locação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção no recalculo do valor da locação" />
+    <MESSAGE value="Inclusão de novos arquivos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inclusão de novos arquivos" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Funcionario.java">
@@ -390,51 +422,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#1425#1426#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1683#1684#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3337#3338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -460,8 +451,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="-1767">
+          <caret line="148" column="17" lean-forward="true" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1805">
+          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1648#1649#0" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
+            <element signature="e#2209#2210#0" expanded="true" />
+            <element signature="e#2245#2246#0" expanded="true" />
+            <element signature="e#3199#3200#0" expanded="true" />
+            <element signature="e#3234#3235#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3337#3338#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
