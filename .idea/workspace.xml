@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40c4216f-8604-407e-b91a-cfeff8179438" name="Default Changelist" comment="Inclusão de novos arquivos, métodos e tratamentos">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="40c4216f-8604-407e-b91a-cfeff8179438" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Situacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Situacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Moto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Moto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Opcionais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Opcionais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoCombustivel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoCombustivel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/TipoVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Van.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Van.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,16 +28,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="781">
-              <caret line="42" column="54" lean-forward="true" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+            <state relative-caret-position="19">
+              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoCliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,172 +54,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding>
-                <element signature="e#506#507#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#1325#1326#0" expanded="true" />
-                <element signature="e#1355#1356#0" expanded="true" />
-                <element signature="e#1751#1752#0" expanded="true" />
-                <element signature="e#1819#1820#0" expanded="true" />
-                <element signature="e#1863#1864#0" expanded="true" />
-                <element signature="e#1902#1903#0" expanded="true" />
-                <element signature="e#1944#1945#0" expanded="true" />
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="e#2006#2007#0" expanded="true" />
-                <element signature="e#2033#2034#0" expanded="true" />
-                <element signature="e#2060#2061#0" expanded="true" />
-                <element signature="e#2086#2087#0" expanded="true" />
-                <element signature="e#2113#2114#0" expanded="true" />
-                <element signature="e#2139#2140#0" expanded="true" />
-                <element signature="e#2173#2174#0" expanded="true" />
-                <element signature="e#2204#2205#0" expanded="true" />
-                <element signature="e#2247#2248#0" expanded="true" />
-                <element signature="e#2278#2279#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="80" column="24" lean-forward="true" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-              <folding>
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#613#614#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#754#755#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#875#876#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1032#1033#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1104#1105#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-                <element signature="e#1177#1178#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-                <element signature="e#1264#1265#0" expanded="true" />
-                <element signature="e#1306#1307#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java">
+        <entry file="file://$PROJECT_DIR$/src/exception/acessoNegadoException.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
-                <element signature="e#603#604#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
-                <element signature="e#1425#1426#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1503#1504#0" expanded="true" />
-                <element signature="e#1540#1541#0" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-                <element signature="e#1074#1075#0" expanded="true" />
-                <element signature="e#1104#1105#0" expanded="true" />
-                <element signature="e#1683#1684#0" expanded="true" />
-                <element signature="e#2245#2246#0" expanded="true" />
-                <element signature="e#3234#3235#0" expanded="true" />
-                <element signature="e#3337#3338#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="130" column="43" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1240#1241#0" expanded="true" />
-                <element signature="e#1274#1275#0" expanded="true" />
-                <element signature="e#1326#1327#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1406#1407#0" expanded="true" />
-                <element signature="e#1438#1439#0" expanded="true" />
-                <element signature="e#1486#1487#0" expanded="true" />
-                <element signature="e#1528#1529#0" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1597#1598#0" expanded="true" />
-                <element signature="e#1633#1634#0" expanded="true" />
-                <element signature="e#1662#1663#0" expanded="true" />
-                <element signature="e#1574#1575#0" expanded="true" />
-                <element signature="e#1612#1613#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1722#1723#0" expanded="true" />
-                <element signature="e#1774#1775#0" expanded="true" />
-                <element signature="e#1809#1810#0" expanded="true" />
-                <element signature="e#1878#1879#0" expanded="true" />
-                <element signature="e#1926#1927#0" expanded="true" />
-                <element signature="e#1970#1971#0" expanded="true" />
-                <element signature="e#2010#2011#0" expanded="true" />
-                <element signature="e#2045#2046#0" expanded="true" />
-                <element signature="e#2075#2076#0" expanded="true" />
-                <element signature="e#2123#2124#0" expanded="true" />
-                <element signature="e#2161#2162#0" expanded="true" />
-              </folding>
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -228,16 +87,16 @@
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Retirada.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Devolucao.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="567" />
-    <option name="width" value="1362" />
-    <option name="height" value="1055" />
+    <option name="x" value="566" />
+    <option name="width" value="1363" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -257,6 +116,12 @@
               <item name="poo-projeto-locacao-veiculos" type="b2602c69:ProjectViewProjectNode" />
               <item name="poo-projeto-locacao-veiculos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poo-projeto-locacao-veiculos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poo-projeto-locacao-veiculos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="arquivos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="poo-projeto-locacao-veiculos" type="b2602c69:ProjectViewProjectNode" />
@@ -284,6 +149,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="locadora" type="462c0819:PsiDirectoryNode" />
               <item name="veiculos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poo-projeto-locacao-veiculos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poo-projeto-locacao-veiculos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,7 +247,7 @@
     <frame x="-8" y="-8" width="1691" height="929" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1461019" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17311233" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -390,10 +261,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26042983" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.35056746" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32996207" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32996207" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32996207" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -460,27 +331,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Retirada.java">
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Retirada.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Devolucao.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Devolucao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="42" column="54" lean-forward="true" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="779">
+          <caret line="512" column="43" selection-end-line="644" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -494,7 +350,7 @@
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="e#506#507#0" expanded="true" />
             <element signature="e#538#539#0" expanded="true" />
@@ -522,62 +378,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="80" column="24" lean-forward="true" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-          <folding>
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1306#1307#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#405#406#0" expanded="true" />
@@ -605,39 +421,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="130" column="43" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
+        <state relative-caret-position="420">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1240#1241#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1438#1439#0" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1722#1723#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
-            <element signature="e#1809#1810#0" expanded="true" />
-            <element signature="e#1878#1879#0" expanded="true" />
-            <element signature="e#1926#1927#0" expanded="true" />
-            <element signature="e#1970#1971#0" expanded="true" />
-            <element signature="e#2010#2011#0" expanded="true" />
-            <element signature="e#2045#2046#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/acessoNegadoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
     </entry>
