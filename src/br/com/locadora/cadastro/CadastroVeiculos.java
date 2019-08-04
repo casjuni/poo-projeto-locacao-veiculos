@@ -12,29 +12,27 @@ import br.com.locadora.veiculos.TipoCombustivel;
 import br.com.locadora.veiculos.Veiculo;
 
 public class CadastroVeiculos {
-	
+	//commit
 	private static CadastroVeiculos registroVeiculos;
 	
-	private CadastroVeiculos() {
+	private CadastroVeiculos(String arquivo) {
+		this.arquivo = arquivo;
 	}
 	
 	public static CadastroVeiculos iniciaCadastroVeiculos() {
 		if (registroVeiculos == null) {
-			registroVeiculos = new CadastroVeiculos();
+			registroVeiculos = new CadastroVeiculos("veiculos.txt");
 		}
 		return registroVeiculos;
 	}
-	
+	private static String file;
+	private static CadastroVeiculos leituraEscrita = new CadastroVeiculos(file);
 	private String arquivo;
 	private static int MAX = 100;
-	private Opcionais[] itens;
-
-	public CadastroVeiculos(String arquivo) {
-		this.arquivo = arquivo;
-	}
+	private Opcionais[] itens = new Opcionais[4];
 
 	public Veiculo[] leDados() throws FileNotFoundException, IOException {
-		Veiculo[] funcs = new Veiculo[MAX]; 
+		Veiculo[] frota = new Veiculo[MAX]; 
 		String linha;
 		int quant = 0; 
 
@@ -73,7 +71,7 @@ public class CadastroVeiculos {
 				}
 				
 				Veiculo v = new Veiculo(placa, km, marca, modelo, combustivel, itens);
-				funcs[quant] = v;
+				frota[quant] = v;
 				quant++;
 				linha = bufferLeitura.readLine();
 			}
@@ -81,7 +79,7 @@ public class CadastroVeiculos {
 		} finally {
 			bufferLeitura.close();
 		}
-		return funcs;
+		return frota;
 	}
 
 	public void salva(Veiculo veiculo) throws IOException {

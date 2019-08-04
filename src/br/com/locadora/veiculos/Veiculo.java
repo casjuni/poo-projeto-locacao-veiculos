@@ -86,5 +86,10 @@ public class Veiculo {
         setTipoCombustivel(combustivel);
         setOpcionais(opcionais);
     }
+    
+    @Override
+    public String toString() {
+    	return "Placa "+placa+" km "+km+" Marca "+marca+" Modelo "+ modelo+" Combustível "+combustivel;
+    }
 
 }
