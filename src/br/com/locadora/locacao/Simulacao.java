@@ -8,7 +8,6 @@ import java.util.Date;
 
 public class Simulacao extends Locacao {
 
-    private static int codigoSimulacao = 0;
     private boolean simulacaoAtiva;
     private boolean operacaoEfetivada;
 
@@ -21,20 +20,11 @@ public class Simulacao extends Locacao {
             return;
         }
 
-        setCodigoSimulacao();
         setSituacao(Situacao.PENDENTE);
 
         Calculadora calculadora = new Calculadora();
 
         setValorLocacao(calculadora.CalcularValorLocacao(veiculo, getDataRetirada(), getDataDevolucao()));
-    }
-
-    public static int getCodigoSimulacao() {
-        return codigoSimulacao;
-    }
-
-    public static void setCodigoSimulacao() {
-        Simulacao.codigoSimulacao = codigoSimulacao + 1;
     }
 
     public boolean isOperacaoEfetivada() {
@@ -52,7 +42,7 @@ public class Simulacao extends Locacao {
             else
             {
                 this.operacaoEfetivada = operacaoEfetivada;
-                setCodigoLocacao(getCodigoSimulacao());
+                setCodigoLocacao();
             }
 
         }
@@ -72,7 +62,7 @@ public class Simulacao extends Locacao {
     public String exibirSimulacao()
     {
         return "********** SIMULACAO **********" +
-                "\nCodigo: " + getCodigoSimulacao() + " - Veiculo: " + getVeiculo().getPlaca() +
+                "\nCodigo: " + getCodigoLocacao() + " - Veiculo: " + getPlaca() +
                 "\n - Cliente: " + getCliente() +
                 "\n - Data retirada: " + getDataRetirada() +
                 "\n - Data devolucao: " + getDataDevolucao() +

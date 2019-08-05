@@ -45,11 +45,15 @@ public class Locacao
         return codigoLocacao;
     }
 
-    protected void setCodigoLocacao(int codigo) {
-        this.codigoLocacao = codigo;
+    protected void setCodigoLocacao() {
+        this.codigoLocacao = getCodigoLocacao() + 1;
     }
 
-    public Veiculo getVeiculo() {
+    public String getPlaca() {
+        return veiculo.getPlaca();
+    }
+
+    private Veiculo getVeiculo() {
         return veiculo;
     }
 

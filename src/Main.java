@@ -6,7 +6,6 @@ import java.util.GregorianCalendar;
 
 import br.com.locadora.veiculos.*;
 import br.com.locadora.pessoa.*;
-import br.com.locadora.cadastro.CadastroVeiculos;
 import br.com.locadora.locacao.*;
 
 import java.io.FileNotFoundException;
@@ -41,48 +40,26 @@ public class Main
 	private static Cliente[] clientes = new Cliente[MAX_CLIENTES];
 	private static Veiculo[] frota = new Veiculo[MAX_VEICULOS];
 	private static Simulacao[] simulacoes = new Simulacao[MAX_LOCACOES];
+	private static Locacao[] locacoes = new Locacao[MAX_LOCACOES];
 	
 	private static String arquivo_funcs = "funcionarios.txt";
 	private static String arquivo_clientes = "clientes.txt";
+    private static String arquivo_locacao = "locacao.txt";
+    private static String arquivo_veiculos = "veiculos.txt";
 	
 	private static ArquivoFunc FuncFile = new ArquivoFunc(arquivo_funcs);
 	private static ArquivoCliente ClienteFile = new ArquivoCliente(arquivo_clientes);
-	private static CadastroVeiculos VehFile = CadastroVeiculos.iniciaCadastroVeiculos();
+    private static ArquivoLocacao LocacaoFile = new ArquivoLocacao(arquivo_locacao);
+    private static ArquivoVeiculo VehFile = new ArquivoVeiculo(arquivo_veiculos);
+
 	
 	
     public static void main(String[] args) throws Exception  {
 
-    	/*Veiculo veiculo = new Carro("ELO1025",
-                                    50000,
-                                    "Honda",
-                                    "Civic",
-                                    TipoCombustivel.GASOLINA,
-                                    new Opcionais[] {Opcionais.AR_CONDICIONADO, Opcionais.DIRECAO_HIDRAULICA});
-
-        Veiculo veiculo2 = new Carro("ELO1025",
-                50000,
-                "Honda",
-                "Civic",
-                TipoCombustivel.GASOLINA,
-                new Opcionais[] {Opcionais.AR_CONDICIONADO, Opcionais.DIRECAO_HIDRAULICA, Opcionais.BANCOS_COURO, Opcionais.VIDROS_ELETRICOS});
-
-       System.out.println(veiculo.toString());
-       System.out.println(veiculo2.toString());
-       
-       Date hoje = new Date();
-
-       Locacao locacao = new Simulacao(veiculo, "12345678900","04/08/2019", "10/08/2019");
-	   ((Simulacao)locacao).setOperacaoEfetivada(true);
-	   //System.out.println(((Simulacao) locacao).exibirSimulacao());
-	   //System.out.println(locacao.exibirLocacao());
-	   locacao.realizarRetirada(hoje, 51000);
-	   System.out.println(locacao.exibirLocacao());
-	   locacao.realizarDevolucao(StringToDate("09/08/2019"), 52000);
-	   System.out.println(locacao.exibirLocacao());*/
-
     	carregarFuncs();
     	carregarClientes();
     	carregarVeiculos();
+        carregarLocacoes();
     	
 		int opcao;
 		
@@ -294,7 +271,10 @@ public class Main
 		}
 		for (int i = 0; i < MAX_CLIENTES && clientes[i] != null; i++) 
 		{
-			ContagemCliente ++;
+			if(ContagemCliente == -1)
+				ContagemCliente = 0;
+
+			ContagemCliente++;
 		}
 	}
     
@@ -464,10 +444,11 @@ public class Main
     private static void telaFuncionario() throws Exception
     {
     	int opcao;
+    	int codigoSimulacao;
     	do 
 		{
 			opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma opção:\n" + "1. Gerenciar veiculos\n"
-					+ "2. Ver historico de locacoes\n" + "3. Sair"));
+					+ "2. Ver historico de locacoes\n" + "3. Registrar retirada" + "4. Registrar devolução" + "5. Sair"));
 			
 			switch (opcao) 
 			{
@@ -477,7 +458,17 @@ public class Main
 				case 2:
 					JOptionPane.showMessageDialog(null, ArquivoHistorico.mostrarHistorico());
 					break;
-				case 3:
+                case 3:
+                    codigoSimulacao = Integer.parseInt(JOptionPane.showInputDialog("Digite o código da simulação: "));
+                    String dataRetirada = JOptionPane.showInputDialog("Digite a data de retirada (dd/mm/yyyy): ");
+                    realizarRetirada(codigoSimulacao, StringToDate(dataRetirada));
+                    break;
+                case 4:
+                    codigoSimulacao = Integer.parseInt(JOptionPane.showInputDialog("Digite o código da simulação: "));
+                    String dataDevolucao = JOptionPane.showInputDialog("Digite a data da devolução (dd/mm/yyyy): ");
+                    realizarRetirada(codigoSimulacao, StringToDate(dataDevolucao));
+                    break;
+				case 5:
 					System.out.println("Voce decidiu sair!");
 					break;
 	
@@ -485,7 +476,7 @@ public class Main
 					System.out.println("Opcao invalida!");
 					break;
 			}
-		}	while (opcao != 3);
+		}	while (opcao != 5);
     }
     private static void gerenciarVeiculos()
     {
@@ -644,7 +635,7 @@ public class Main
 	}
     
 //______________________________ SISTEMA DE VEICULOS _____________________________ //
-    private static void carregarVeiculos() 
+    private static void carregarVeiculos()  throws Exception
     {
 		try 
 		{
@@ -655,7 +646,11 @@ public class Main
 			System.out.println("Erro durante a leitura do arquivo!" + e.getMessage());
 		}
 		for (int i = 0; i < MAX_VEICULOS && frota[i] != null; i++) {
-			ContagemVeh ++;
+
+			if(ContagemVeh == -1)
+				ContagemVeh = 0;
+
+			ContagemVeh++;
 		}
 	}
     
@@ -714,6 +709,75 @@ public class Main
 		else System.out.println("Limite atingido!");
 	}
 
+	public static int vbusca(String placa)
+	{
+		for(int v = 0; v < MAX_VEICULOS; v++)
+		{
+			if(frota[v] != null && frota[v].getPlaca().equals(placa))
+			{
+				return v;
+			}
+		}
+		return -1;
+
+	}
+
+    private static void removeVeh(String placa) throws Exception
+    {
+        int pos = vbusca(placa);
+
+        if(pos == -1)
+        {
+            throw new veiculoInexistenteException(placa);
+        }
+        else
+        {
+            try
+            {
+                VehFile.removerveh(frota[pos]);
+                frota[pos] = null;
+
+                // reestruturando o vetor para eliminar "slots" vazios no meio
+
+                for(int a = pos; a < MAX_VEICULOS; a++)
+                {
+                    if(frota[a] == null)
+                    {
+                        for(int b=a+1; b < MAX_VEICULOS; b++)
+                        {
+                            if(frota[b] != null)
+                            {
+                                frota[a] = frota[b];
+                                frota[b] = null;
+                                break;
+                            }
+                        }
+                    }
+                }
+                int contar = 0;
+                // reescrevendo o arquivo
+                for(int v = 0; v < MAX_VEICULOS; v++)
+                {
+                    if(frota[v] != null)
+                    {
+                        contar ++;
+                        try
+                        {
+                            VehFile.salvarveh(frota[v]);
+                        }
+                        catch (IOException e) {
+                            System.out.println("Erro no cadastro: " + e.getMessage());
+                        }
+                    }
+                }
+                if(contar !=0) carregarVeiculos();
+            }
+            catch (Exception e) {
+                System.out.println("Erro ao remover veiculo");
+            }
+        }
+    }
+
 	private static Veiculo procurarVeiculo(String placa) throws veiculoSemCadastroException{
 
     	for(int i = ContagemVeh; i <= MAX_VEICULOS; i++) {
@@ -728,16 +792,17 @@ public class Main
 	private static void telaLocacao(String email) throws Exception{
 
 		int opcao;
+		int codigoSimulacao;
 		do
 		{
 			opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma opção:\n" + "1. Carregar simulação\n"
-					+ "2. Nova simulação\n" + "3. Sair"));
+					+ "2. Nova simulação\n" + "3. Efetivar operação" + "4. Sair"));
 
 			switch (opcao)
 			{
 				case 1:
-					int codigoSimulacao = Integer.parseInt(JOptionPane.showInputDialog("Digite o código da simulação:\n Caso digite 0, será exibido todas as suas simulações:"));
-					if(codigoSimulacao == 0) {
+					codigoSimulacao = Integer.parseInt(JOptionPane.showInputDialog("Digite o código da simulação:\n Caso digite 0, será exibido todas as suas simulações:"));
+					if(codigoSimulacao != 0) {
 						carregarSimulacaoPorCodigo(codigoSimulacao);
 					} else {
 						carregarSimulacoesPorCliente(email);
@@ -747,14 +812,17 @@ public class Main
 					novaSimulacao(email);
 					break;
 				case 3:
-					System.out.println("Voce decidiu sair!");
+                    codigoSimulacao = Integer.parseInt(JOptionPane.showInputDialog("Digite o código da simulação:\n "));
+					efetivarOperacao(codigoSimulacao);
 					break;
-
+                case 4:
+                    System.out.println("Voce decidiu sair!");
+                    break;
 				default:
 					System.out.println("Opcao invalida!");
 					break;
 			}
-		}	while (opcao != 3);
+		}	while (opcao != 4);
 	}
 
 	public static void carregarSimulacoesPorCliente(String email) throws simulacaoNaoEncontradaException, clienteSemCadastroException{
@@ -763,7 +831,7 @@ public class Main
 		boolean clienteEncontrado = false;
 		String cpf = "";
 
-		for(int i = 0; i <= MAX_CLIENTES; i++) {
+		for(int i = 0; i < ContagemCliente; i++) {
 			if(clientes[i].email().equals(email)) {
 				cpf = clientes[i].CPF();
 				clienteEncontrado = true;
@@ -807,17 +875,19 @@ public class Main
 		{
 			Cliente cliente = procurarCliente(email);
 			String placa = JOptionPane.showInputDialog("Digite a placa: ");
-			Veiculo veiculo = procurarVeiculo(placa);
+
+			int i = vbusca(placa);
+
 			String dataRetirada = JOptionPane.showInputDialog("Digite a data de retirada (dd/mm/yyyy): ");
 			String dataDevolucao = JOptionPane.showInputDialog("Digite a data de devolucao (dd/mm/yyyy): ");
 
-			Simulacao nova = new Simulacao(veiculo, cliente.CPF(), StringToDate(dataRetirada), StringToDate(dataDevolucao));
+			Simulacao nova = new Simulacao(frota[i], cliente.CPF(), StringToDate(dataRetirada), StringToDate(dataDevolucao));
 
 			try
 			{
 				// Alterar
-				VehFile.salvarveh(veiculo);
-				frota[++ContagemVeh] = veiculo;
+				LocacaoFile.salvarlocacao(nova);
+				simulacoes[++ContagemSimulacao] = nova;
 
 			}
 			catch (IOException e) {
@@ -826,6 +896,75 @@ public class Main
 		}
 		else System.out.println("Limite atingido!");
 
+	}
+
+	public static void efetivarOperacao(int codigoSimulacao) throws simulacaoNaoEncontradaException{
+
+        boolean simulacaoEncontrada = false;
+
+        for(int i = 0; i <= MAX_LOCACOES; i++) {
+            if(simulacoes[i].getCodigoLocacao() == codigoSimulacao) {
+                simulacaoEncontrada = true;
+                simulacoes[i].setOperacaoEfetivada(true);
+            }
+        }
+
+        if(!simulacaoEncontrada)
+            throw new simulacaoNaoEncontradaException();
+
+    }
+
+    public static void realizarRetirada(int codigoSimulacao, Date dataRetirada) throws simulacaoNaoEncontradaException {
+
+        boolean simulacaoEncontrada = false;
+
+        for(int i = 0; i <= MAX_LOCACOES; i++) {
+            if(simulacoes[i].getCodigoLocacao() == codigoSimulacao) {
+                simulacaoEncontrada = true;
+                simulacoes[i].setDataRetirada(dataRetirada);
+            }
+        }
+
+        if(!simulacaoEncontrada)
+            throw new simulacaoNaoEncontradaException();
+
+    }
+
+    public static void realizarDevolucao(int codigoSimulacao, Date dataDevolucao) throws simulacaoNaoEncontradaException {
+
+        boolean simulacaoEncontrada = false;
+
+        for(int i = 0; i <= MAX_LOCACOES; i++) {
+            if(simulacoes[i].getCodigoLocacao() == codigoSimulacao) {
+                simulacaoEncontrada = true;
+                simulacoes[i].setDataDevolucao(dataDevolucao);
+            }
+        }
+
+        if(!simulacaoEncontrada)
+            throw new simulacaoNaoEncontradaException();
+
+    }
+
+	private static void carregarLocacoes() throws Exception
+	{
+		try
+		{
+			locacoes = LocacaoFile.LerLocacao(frota, ContagemVeh);
+		} catch (FileNotFoundException e) {
+			System.out.println("Erro: Arquivo não encontrado! " + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Erro durante a leitura do arquivo!" + e.getMessage());
+		} catch(semClientesException e) {
+			System.out.println("Nao ha locações/simulações cadastrados");
+		}
+		for (int i = 0; i < MAX_LOCACOES && locacoes[i] != null; i++)
+		{
+			if(ContagemSimulacao == -1)
+				ContagemSimulacao = 0;
+
+			ContagemSimulacao++;
+		}
 	}
 
 //_________________________________ VALIDAÇÕES ___________________________________ //
