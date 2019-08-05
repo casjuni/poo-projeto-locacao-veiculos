@@ -17,6 +17,14 @@ public class Locacao
     private Veiculo veiculo;
     private String cliente;
 
+    public Locacao(Veiculo veiculo, String cpf, Date dataRetirada, Date dataDevolucao)
+    {
+        setVeiculo(veiculo);
+        setCliente(cpf);
+        setDataRetirada(dataRetirada);
+        setDataDevolucao(dataDevolucao);
+    }
+
     public Situacao getSituacao() {
         return situacao;
     }
@@ -33,11 +41,6 @@ public class Locacao
         this.cliente = cliente;
     }
 
-    public Locacao()
-    {
-
-    }
-
     public int getCodigoLocacao() {
         return codigoLocacao;
     }
@@ -46,7 +49,7 @@ public class Locacao
         this.codigoLocacao = codigo;
     }
 
-    private Veiculo getVeiculo() {
+    public Veiculo getVeiculo() {
         return veiculo;
     }
 

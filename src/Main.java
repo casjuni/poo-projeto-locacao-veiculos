@@ -30,14 +30,17 @@ public class Main
 	private static final int MAX_FUNCS = 10;
 	private static final int MAX_CLIENTES = 1000;
 	private static final int MAX_VEICULOS = 100;
+	private static final int MAX_LOCACOES = 1000;
 	
 	private static int ContagemFunc = -1;
 	private static int ContagemCliente = -1;
-	private static int ContagemVeh = -1; 
+	private static int ContagemVeh = -1;
+	private static int ContagemSimulacao = -1;
 
 	private static Funcionario[] funcionarios = new Funcionario[MAX_FUNCS];
 	private static Cliente[] clientes = new Cliente[MAX_CLIENTES];
 	private static Veiculo[] frota = new Veiculo[MAX_VEICULOS];
+	private static Simulacao[] simulacoes = new Simulacao[MAX_LOCACOES];
 	
 	private static String arquivo_funcs = "funcionarios.txt";
 	private static String arquivo_clientes = "clientes.txt";
@@ -49,7 +52,7 @@ public class Main
 	
     public static void main(String[] args) throws Exception  {
 
-    	Veiculo veiculo = new Carro("ELO1025",
+    	/*Veiculo veiculo = new Carro("ELO1025",
                                     50000,
                                     "Honda",
                                     "Civic",
@@ -75,7 +78,7 @@ public class Main
 	   locacao.realizarRetirada(hoje, 51000);
 	   System.out.println(locacao.exibirLocacao());
 	   locacao.realizarDevolucao(StringToDate("09/08/2019"), 52000);
-	   System.out.println(locacao.exibirLocacao());
+	   System.out.println(locacao.exibirLocacao());*/
 
     	carregarFuncs();
     	carregarClientes();
@@ -136,7 +139,7 @@ public class Main
 		} while (escolha < 1 || escolha > 3);
     }
     
-    private static void logarCliente() throws clienteSemCadastroException
+    private static void logarCliente() throws clienteSemCadastroException, Exception
     {
     	String email = JOptionPane.showInputDialog("Digite o e-mail: ");
     	String senha = JOptionPane.showInputDialog("Digite a senha: ");
@@ -180,7 +183,7 @@ public class Main
         	
     }
     
-    private static void telaCliente(String email) throws clienteSemCadastroException
+    private static void telaCliente(String email) throws clienteSemCadastroException, Exception
     {
     	int opcao;
     	do 
@@ -191,7 +194,7 @@ public class Main
 			switch (opcao) 
 			{
 				case 1:
-					//iniciar locacao
+					telaLocacao(email);
 					break;
 				case 2:
 					// ver historico
@@ -222,6 +225,7 @@ public class Main
 		}	while (opcao != 4);
 
     }
+
     private static void cadastrarCliente() throws idadeMinimaException, IOException, limiteClientesException, idadeMinimaException
     {
     	String nome = JOptionPane.showInputDialog("Digite o nome: ");
@@ -275,6 +279,7 @@ public class Main
     	else throw new limiteClientesException(MAX_CLIENTES);
     
     }
+
     private static void carregarClientes() 
     {
 		try 
@@ -305,6 +310,7 @@ public class Main
 		return -1;
 		
 	}
+
     private static void removeCliente(String email) throws clienteSemCadastroException
 	{
 		int pos = cbusca(email);
@@ -365,6 +371,19 @@ public class Main
 			}
 		}
 	}
+
+	private static Cliente procurarCliente(String email) throws clienteSemCadastroException
+	{
+
+		for(int i = 0; i <= MAX_CLIENTES; i++) {
+			if(clientes[i].email().equals(email)) {
+				return clientes[i];
+			}
+		}
+
+		throw new clienteSemCadastroException(email);
+	}
+
     //___________________________ SISTEMA DE FUNCIONARIO _________________________ //
     private static void opcoesFuncionario()  throws Exception
     {
@@ -693,6 +712,120 @@ public class Main
 			}
 		} 
 		else System.out.println("Limite atingido!");
+	}
+
+	private static Veiculo procurarVeiculo(String placa) throws veiculoSemCadastroException{
+
+    	for(int i = ContagemVeh; i <= MAX_VEICULOS; i++) {
+    		if(frota[i].getPlaca().equals(placa)) {
+    			return frota[i];
+			}
+		}
+
+    	throw new veiculoSemCadastroException();
+	}
+//_________________________________ SISTEMA DE LOCACAO ___________________________________ //
+	private static void telaLocacao(String email) throws Exception{
+
+		int opcao;
+		do
+		{
+			opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma opção:\n" + "1. Carregar simulação\n"
+					+ "2. Nova simulação\n" + "3. Sair"));
+
+			switch (opcao)
+			{
+				case 1:
+					int codigoSimulacao = Integer.parseInt(JOptionPane.showInputDialog("Digite o código da simulação:\n Caso digite 0, será exibido todas as suas simulações:"));
+					if(codigoSimulacao == 0) {
+						carregarSimulacaoPorCodigo(codigoSimulacao);
+					} else {
+						carregarSimulacoesPorCliente(email);
+					}
+					break;
+				case 2:
+					novaSimulacao(email);
+					break;
+				case 3:
+					System.out.println("Voce decidiu sair!");
+					break;
+
+				default:
+					System.out.println("Opcao invalida!");
+					break;
+			}
+		}	while (opcao != 3);
+	}
+
+	public static void carregarSimulacoesPorCliente(String email) throws simulacaoNaoEncontradaException, clienteSemCadastroException{
+
+		boolean simulacaoEncontrada = false;
+		boolean clienteEncontrado = false;
+		String cpf = "";
+
+		for(int i = 0; i <= MAX_CLIENTES; i++) {
+			if(clientes[i].email().equals(email)) {
+				cpf = clientes[i].CPF();
+				clienteEncontrado = true;
+			}
+		}
+
+		if(!clienteEncontrado)
+			throw new clienteSemCadastroException(email);
+
+		for(int i = 0; i <= MAX_LOCACOES; i++) {
+			if(simulacoes[i].getCliente() == cpf) {
+				System.out.println(simulacoes[i].exibirSimulacao());
+				simulacaoEncontrada = true;
+			}
+		}
+
+		if(!simulacaoEncontrada)
+			throw new simulacaoNaoEncontradaException();
+
+	}
+
+	public static void carregarSimulacaoPorCodigo(int codigoSimulacao) throws simulacaoNaoEncontradaException{
+
+    	boolean simulacaoEncontrada = false;
+
+		for(int i = 0; i <= MAX_LOCACOES; i++) {
+			if(simulacoes[i].getCodigoLocacao() == codigoSimulacao) {
+				System.out.println(simulacoes[i].exibirSimulacao());
+				simulacaoEncontrada = true;
+			}
+		}
+
+		if(!simulacaoEncontrada)
+			throw new simulacaoNaoEncontradaException();
+
+	}
+
+	public static void novaSimulacao(String email) throws Exception{
+
+		if (ContagemSimulacao + 1 < MAX_LOCACOES)
+		{
+			Cliente cliente = procurarCliente(email);
+			String placa = JOptionPane.showInputDialog("Digite a placa: ");
+			Veiculo veiculo = procurarVeiculo(placa);
+			String dataRetirada = JOptionPane.showInputDialog("Digite a data de retirada (dd/mm/yyyy): ");
+			String dataDevolucao = JOptionPane.showInputDialog("Digite a data de devolucao (dd/mm/yyyy): ");
+
+			Simulacao nova = new Simulacao(veiculo, cliente.CPF(), StringToDate(dataRetirada), StringToDate(dataDevolucao));
+
+			try
+			{
+				// Alterar
+				VehFile.salvarveh(veiculo);
+				frota[++ContagemVeh] = veiculo;
+
+			}
+			catch (IOException e) {
+				System.out.println("Erro no cadastro: " + e.getMessage());
+			}
+		}
+		else System.out.println("Limite atingido!");
+
 	}
 
 //_________________________________ VALIDAÇÕES ___________________________________ //
