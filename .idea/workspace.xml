@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="40c4216f-8604-407e-b91a-cfeff8179438" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/cadastro/CadastroVeiculos.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,40 +21,147 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
+                <element signature="e#976#977#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1488#1489#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoVeiculo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#614#615#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#867#868#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="13" column="45" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="912">
+              <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1227#1228#0" expanded="true" />
+                <element signature="e#1256#1257#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2557">
-              <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="131">
+              <caret line="952" selection-start-line="952" selection-end-line="952" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#Main#0" />
-                <element signature="method#opcoesCliente#0;class#Main#0" />
-                <element signature="method#logarCliente#0;class#Main#0" />
-                <element signature="method#telaCliente#0;class#Main#0" />
-                <element signature="method#cadastrarCliente#0;class#Main#0" />
-                <element signature="method#removeCliente#0;class#Main#0" />
-                <element signature="method#opcoesFuncionario#0;class#Main#0" />
-                <element signature="method#logarFuncionario#0;class#Main#0" />
-                <element signature="method#telaFuncionario#0;class#Main#0" />
-                <element signature="method#cadastrarFuncionario#0;class#Main#0" />
-                <element signature="method#removeFuncionario#0;class#Main#0" />
-                <element signature="method#fbusca#0;class#Main#0" />
-                <element signature="method#carregarFuncs#0;class#Main#0" />
-                <element signature="method#idadeValida#0;class#Main#0" />
-                <element signature="method#formatoInvalido#0;class#Main#0" />
-                <element signature="method#emailExistente#0;class#Main#0" />
-                <element signature="method#validaCPF#0;class#Main#0" />
+                <element signature="e#3626#4160#0" />
+                <element signature="e#4170#5460#0" />
+                <element signature="e#5470#6422#0" />
+                <element signature="e#6428#8734#0" />
+                <element signature="e#9258#9454#0" />
+                <element signature="e#9460#10774#0" />
+                <element signature="e#10777#11039#0" />
+                <element signature="e#11045#11704#0" />
+                <element signature="e#11714#12988#0" />
+                <element signature="e#12998#13607#0" />
+                <element signature="e#13612#14195#0" />
+                <element signature="e#14200#15481#0" />
+                <element signature="e#15491#16800#0" />
+                <element signature="e#16810#17011#0" />
+                <element signature="e#17016#17532#0" />
+                <element signature="e#18034#18304#0" />
+                <element signature="e#18307#19573#0" />
+                <element signature="e#19329#19520#0" />
+                <element signature="e#19250#20982#0" />
+                <element signature="e#19588#19683#0" />
+                <element signature="e#22584#22895#0" />
+                <element signature="e#22905#23073#0" />
+                <element signature="e#23216#23803#0" />
+                <element signature="e#23813#24894#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoHistorico.java">
+        <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1569">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="729">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,11 +169,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/locadora/cadastro/CadastroVeiculos.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoLocacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="266">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,6 +190,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>acessoNegadoException</find>
+      <find>cadastrarFuncionario</find>
+      <find>carregarFuncs</find>
+      <find>carregarClientes</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -90,15 +209,19 @@
         <option value="$PROJECT_DIR$/src/br/com/locadora/veiculos/Van.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/veiculos/Moto.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/veiculos/Carro.java" />
-        <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Situacao.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Retirada.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Devolucao.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java" />
+        <option value="$PROJECT_DIR$/src/arquivos/ArquivoFrota.java" />
+        <option value="$PROJECT_DIR$/src/exception/simulacaoNaoEncontrada.java" />
+        <option value="$PROJECT_DIR$/src/exception/simulacaoNaoEncontradaException" />
+        <option value="$PROJECT_DIR$/src/exception/veiculoSemCadastroException.java" />
+        <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java" />
         <option value="$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java" />
-        <option value="$PROJECT_DIR$/src/arquivos/ArquivoFrota.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/arquivos/ArquivoLocacao.java" />
       </list>
     </option>
   </component>
@@ -137,13 +260,6 @@
               <item name="poo-projeto-locacao-veiculos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="locadora" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poo-projeto-locacao-veiculos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poo-projeto-locacao-veiculos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="locadora" type="462c0819:PsiDirectoryNode" />
-              <item name="cadastro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="poo-projeto-locacao-veiculos" type="b2602c69:ProjectViewProjectNode" />
@@ -281,11 +397,26 @@
       <option name="project" value="LOCAL" />
       <updated>1564952033153</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Inclusão de novos arquivos">
+      <created>1564961377908</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564961377908</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Inclusão de novos arquivos e módulo de locação">
+      <created>1564966607647</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564966607647</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1691" height="929" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17311233" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -296,14 +427,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26675096" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26675096" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39949432" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.19974716" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32996207" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32996207" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32996207" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -314,13 +445,60 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17311233" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26675096" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39949432" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19974716" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32996207" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32996207" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção projeto" />
     <MESSAGE value="Inclusão de novos arquivos, métodos e tratamentos" />
     <MESSAGE value="Correção no recalculo do valor da locação" />
     <MESSAGE value="Inclusão de novos arquivos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inclusão de novos arquivos" />
+    <MESSAGE value="Inclusão de novos arquivos e módulo de locação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inclusão de novos arquivos e módulo de locação" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>833</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>952</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Funcionario.java">
@@ -381,39 +559,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
-            <element signature="e#1819#1820#0" expanded="true" />
-            <element signature="e#1863#1864#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#2006#2007#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#2060#2061#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2113#2114#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2204#2205#0" expanded="true" />
-            <element signature="e#2247#2248#0" expanded="true" />
-            <element signature="e#2278#2279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/veiculos/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoFrota.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/acessoNegadoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/semFuncionariosException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/simulacaoNaoEncontradaException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/clienteSemCadastroException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/veiculoSemCadastroException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding>
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/cadastro/CadastroVeiculos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoHistorico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1976">
+          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoVeiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Pessoa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoFunc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -426,52 +685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Calculadora.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoFrota.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoFunc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-847">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/pessoa/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-633">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/acessoNegadoException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1805">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+        <state relative-caret-position="141">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -480,70 +695,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Locacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1824">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="912">
+          <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1683#1684#0" expanded="true" />
-            <element signature="e#2209#2210#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#3199#3200#0" expanded="true" />
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3289#3290#0" expanded="true" />
-            <element signature="e#3337#3338#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1227#1228#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoHistorico.java">
+    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/locacao/Simulacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1569">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="475">
+          <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/locadora/cadastro/CadastroVeiculos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2557">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="131">
+          <caret line="952" selection-start-line="952" selection-end-line="952" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" />
-            <element signature="method#opcoesCliente#0;class#Main#0" />
-            <element signature="method#logarCliente#0;class#Main#0" />
-            <element signature="method#telaCliente#0;class#Main#0" />
-            <element signature="method#cadastrarCliente#0;class#Main#0" />
-            <element signature="method#removeCliente#0;class#Main#0" />
-            <element signature="method#opcoesFuncionario#0;class#Main#0" />
-            <element signature="method#logarFuncionario#0;class#Main#0" />
-            <element signature="method#telaFuncionario#0;class#Main#0" />
-            <element signature="method#cadastrarFuncionario#0;class#Main#0" />
-            <element signature="method#removeFuncionario#0;class#Main#0" />
-            <element signature="method#fbusca#0;class#Main#0" />
-            <element signature="method#carregarFuncs#0;class#Main#0" />
-            <element signature="method#idadeValida#0;class#Main#0" />
-            <element signature="method#formatoInvalido#0;class#Main#0" />
-            <element signature="method#emailExistente#0;class#Main#0" />
-            <element signature="method#validaCPF#0;class#Main#0" />
+            <element signature="e#3626#4160#0" />
+            <element signature="e#4170#5460#0" />
+            <element signature="e#5470#6422#0" />
+            <element signature="e#6428#8734#0" />
+            <element signature="e#9258#9454#0" />
+            <element signature="e#9460#10774#0" />
+            <element signature="e#10777#11039#0" />
+            <element signature="e#11045#11704#0" />
+            <element signature="e#11714#12988#0" />
+            <element signature="e#12998#13607#0" />
+            <element signature="e#13612#14195#0" />
+            <element signature="e#14200#15481#0" />
+            <element signature="e#15491#16800#0" />
+            <element signature="e#16810#17011#0" />
+            <element signature="e#17016#17532#0" />
+            <element signature="e#18034#18304#0" />
+            <element signature="e#18307#19573#0" />
+            <element signature="e#19329#19520#0" />
+            <element signature="e#19250#20982#0" />
+            <element signature="e#19588#19683#0" />
+            <element signature="e#22584#22895#0" />
+            <element signature="e#22905#23073#0" />
+            <element signature="e#23216#23803#0" />
+            <element signature="e#23813#24894#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arquivos/ArquivoLocacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
