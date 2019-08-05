@@ -1,1 +1,2 @@
-ELO8976;4;null;PALIO;ETANOL;[Lbr.com.locadora.veiculos.Opcionais;@3578436e
+RTO0976;987;FIAT;PALIO;ETANOL;[Lbr.com.locadora.veiculos.Opcionais;@3578436e
+ERT;876;VOLKSVAGEN;GOL;GASOLINA;[Lbr.com.locadora.veiculos.Opcionais;@17776a8

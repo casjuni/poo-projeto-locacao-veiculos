@@ -78,7 +78,7 @@ public class Main {
     					+ "2. Imprimir dados\n" + "3. Remover Veículo\n4. Sair"));
     			switch (opcao) {
     			case 1:
-    				cadastraFuncionario();
+    				cadastraVeiculo();
     				break;
     			case 2:
     				imprimeDados();
@@ -123,7 +123,7 @@ public class Main {
     		}
     	}
 
-    	private static void cadastraFuncionario() {
+    	private static void cadastraVeiculo() {
     		if (indiceAtual + 1 < MAX) {
     			String placa = JOptionPane.showInputDialog("Digite a placa: ");
     			int km  = Integer.parseInt(JOptionPane.showInputDialog("Digite km: "));

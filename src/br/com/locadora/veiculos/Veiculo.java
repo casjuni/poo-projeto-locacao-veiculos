@@ -33,7 +33,7 @@ public class Veiculo {
     }
 
     public void setMarca(String marca) {
-        this.modelo = marca;
+        this.marca = marca;
     }
 
     public String getModelo() {

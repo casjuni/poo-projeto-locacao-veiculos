@@ -29,26 +29,25 @@ public class CadastroVeiculos {
 	private static CadastroVeiculos leituraEscrita = new CadastroVeiculos(file);
 	private String arquivo;
 	private static int MAX = 100;
-	private Opcionais[] itens = new Opcionais[4];
 
 	public Veiculo[] leDados() throws FileNotFoundException, IOException {
 		Veiculo[] frota = new Veiculo[MAX]; 
 		String linha;
-		int quant = 0; 
-
+		int quant = 0;
 		BufferedReader bufferLeitura = new BufferedReader(new FileReader(arquivo));
 		try {
 
 			linha = bufferLeitura.readLine();
 			while (linha != null && quant < MAX) {
 				String campos[] = linha.split(";");
+				int i = 0, j = 0;
 
-				String placa = campos[0];
-				int km = Integer.parseInt(campos[1]);
-				String marca = campos[2];
-				String modelo = campos[3];
+				String placa = campos[i++];
+				int km = Integer.parseInt(campos[i++]);
+				String marca = campos[i++];
+				String modelo = campos[i++];
 				TipoCombustivel combustivel = null;
-				String descricao = campos[4];
+				String descricao = campos[i++];
 				switch (descricao) {
 					case "ETANOL":
 						combustivel = TipoCombustivel.ETANOL;
@@ -65,10 +64,16 @@ public class CadastroVeiculos {
 					case "FLEX":
 						combustivel = TipoCombustivel.FLEX;
 				}
-				itens = null;
-				for (int i = 5; i < campos.length; ++i) {
-					itens[i-5] = opcional(campos[i]);
-				}
+				Opcionais a = null, b = null, c = null, d = null;
+						if (campos.length > i)
+							a = opcional(campos[i++]);
+						if (campos.length > i)
+							b = opcional(campos[i++]);
+						if (campos.length > i)
+							c = opcional(campos[i++]);
+						if (campos.length > i)
+							d = opcional(campos[i++]);
+						Opcionais itens[] = {a, b, c, d};
 				
 				Veiculo v = new Veiculo(placa, km, marca, modelo, combustivel, itens);
 				frota[quant] = v;
